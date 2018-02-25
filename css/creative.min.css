@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body, html {
+	width: 100%;
+	height: 100%
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: #000;
+	color: #fff;
+}
+
+hr {
+	max-width: 50px;
+	border-width: 3px;
+	border-color: #f05f40
+}
+
+hr.light {
+	border-color: #fff
+}
+
+
+a {
+	color: #f05f40;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif
+}
+
+.bg-primary {
+	background-color: #f05f40 !important
+}
+
+.bg-dark {
+	background-color: #212529 !important
+}
+
+.text-faded {
+	color: rgba(255, 255, 255, .7)
+}
+
+section {
+	padding: 8rem 0
+}
+
+.section-heading {
+	margin-top: 0;
+	font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gallery-heading {
+	padding-top: 8rem;
+}
+
+.gallery-line {
+	margin-bottom: 70px !important;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: #212529;
+	text-shadow: none
+}
+
+::selection {
+	color: #fff;
+	background: #212529;
+	text-shadow: none
+}
+
+img::selection {
+	color: #fff;
+	background: 0 0
+}
+
+img::-moz-selection {
+	color: #fff;
+	background: 0 0
+}
+
+header.masthead {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - 56px);
+	background: linear-gradient(rgba(20, 20, 20, 0.55), rgba(20, 20, 20, 0.48)), url(../img/main-image.jpeg) no-repeat top scroll !important;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover
+}
+
+header.masthead hr {
+	margin-top: 30px;
+	margin-bottom: 30px
+}
+
+header.masthead h1 {
+	font-size: 2rem
+}
+
+header.masthead p {
+	font-weight: 300
+}
+
+@media (min-width:768px) {
+	header.masthead p {
+		font-size: 1.15rem
+	}
+
+}
+
+@media (min-width:992px) {
+	header.masthead {
+		height: 100vh;
+		min-height: 650px;
+		padding-top: 0;
+		padding-bottom: 0
+	}
+
+	header.masthead h1 {
+		font-size: 3rem
+	}
+
+}
+
+@media (min-width:1200px) {
+	header.masthead h1 {
+		font-size: 4rem
+	}
+
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Sticky social media list */
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    top:230px;
+    width:210px;
+    z-index: 1100;
+}
+.sticky li{
+	opacity: 0.8;
+    list-style-type:none;
+    color:#efefef;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky li:hover{
+    margin-left:-115px;
+}
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+.sticky li p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:11px;
+}
+.sticky li p a{
+    text-decoration:none;
+    color:#2C3539;
+}
+.sticky li p a:hover{
+    text-decoration:underline;
+}
+
+.social-media-links {
+	width: 20%;
+}
+
+.coliseo-main-logo {
+	width: 105%;
+	opacity: 0.8;
+}
+
+#about {
+	background: #000;
+}
+
+.service-box {
+	max-width: 400px
+}
+
+.parallax-window {
+    min-height: 400px;
+}
+
+.coliseo-parallax-window {
+	min-height: 300px;
+}
+
+.portfolio-box {
+	position: relative;
+	display: block;
+	max-width: 650px;
+	margin: 0 auto
+}
+
+.portfolio-box .portfolio-box-caption {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	opacity: 0;
+	color: #fff;
+	background: #008fc1ad;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+	text-align: center
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category, .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+	padding: 0 15px;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+	font-size: 18px
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+	opacity: 1
+}
+
+.portfolio-box:focus {
+	outline: 0
+}
+
+@media (min-width:768px) {
+	.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+		font-size: 16px
+	}
+
+	.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+		font-size: 22px
+	}
+
+}
+
+.text-primary {
+	color: #f05f40 !important
+}
+
+.btn {
+	font-weight: 700;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 300px;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif
+}
+
+.btn-xl {
+	padding: 1rem 2rem
+}
+
+.btn-primary {
+	background-color: #f05f40;
+	border-color: #f05f40
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+	color: #fff;
+	background-color: #ee4b28 !important
+}
+
+.btn-primary:active, .btn-primary:focus {
+	box-shadow: 0 0 0 .2rem rgba(240, 95, 64, .5) !important
+}
+
+/* Map Section */
+
+#map {
+	padding-bottom: 0;
+}
+
+.map-img {
+	width: 100%;
+}
+
+/* Footer logo */
+.footer-logo {
+	width: 40%;
+	opacity: 0.7;
+}
+
+.partner-logo {
+	width: 14%;
+    opacity: 0.8;
+    margin-left: 30px;
+}
+
+.chilchota-logo {
+	width: 10%;
+}
+
+.televisa-logo {
+	width: 10%;
+}
+
+footer ul li a {
+    font-size: 12px;
+    color: #fff;
+}
+
+footer ul li a.active, footer ul li a:active, footer ul li a:focus, footer ul li a:hover {
+    text-decoration: none;
+    color: #008fc1ad;
+}
+
+.footer-arrow {
+    width: 28%;
+    margin-top: -84px;
+    float: right;
+    margin-right: -50px;
+}
+
+.logo-white {
+    float: left;
+    width: 51%;
+    margin-top: -4px;
+}
+
+ul.footer-txt {
+    list-style: none;
+    font-weight: 100 !important;
+    padding-left: 0px;
+    top: 35%;
+    position: absolute;
+    left: 6%;
+    align-items: flex-start;
+}
+
+ul.footer-txt a {
+	color: #fff;
+}
+
+li.fa-facebook {
+    margin-bottom: 10px;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer-icons {
+    display: flex;
+    color: white;
+    font-size: 32px;
+    text-shadow: -1px 1px 3px #a59597;
+    float: left;
+    flex-direction: column;
+}
+
+.footer-txt-contact {
+    color: white;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#contact {
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header.mastheadprensa {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - 56px);
+	background: linear-gradient(rgba(20, 20, 20, 0.55), rgba(20, 20, 20, 0.48)), url(../img/main-image-press.jpg) no-repeat top scroll !important;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover
+}
+
+#registro{
+	color: black;
+	background-color:  white;
+}
+
+
+

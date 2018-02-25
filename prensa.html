@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Coliseo Centenario - Prensa</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+  </head>
+  <body id="page-top" class="prensa">
+    <header class="mastheadprensa text-center text-white d-flex">
+      <div class="container my-auto">
+        <ul class="footer-txt footer-icons">
+          <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <img src="./img/white-logo.png" class="coliseo-main-logo" alt="coliseo-white-logo">
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="registro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 ">
+            <h2 class="section-heading text-center">Registro de prensa</h2>
+            <hr class="light my-4 gallery-line">
+            <form action="sendmail.php" method="post">
+
+
+              <div class="form-group row text-rigth">
+                <label for="inputPassword" class="col-sm-2 col-form-label" >Nombre de la empresa*</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="E.G. Coliseo Centenario" name="nombre" required="1">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email*</label>
+                <div class="col-sm-10">
+                  <input type="Email"  class="form-control" id="staticEmail" placeholder="E.G. mundo@coliseo.com.mx" name="email" required>
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Evento*</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="E.G. Tibiriche 2018" required name="evento">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Tipo de prensa*</label>
+                <div class="col-sm-10">
+                  <div class="input-group">
+                    <div class="input-groupup-btn">
+                      <select class="form-control" onchange="select_social();" id="tipoprensa" name="tipo">
+                        <option id="nada">----------</option>
+                        <option id="social">Social</option>
+                        <option id="peri">Periódico</option>
+                        <option id="redes">Redes</option>
+                        <option id="tv">TV</option>
+                        <option id="radio">radio</option>
+                        <option id="revista">revista</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Evidencia*</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control"  placeholder="E.G. http://tupagina.com/concierto-2018-coliseo" required="true" name ="evidencia1">
+                </div>
+              </div>
+
+              <div class="form-group row" style="display: none;" id="evidencialink">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Evidencia 2</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control"  placeholder="E.G. http://tupagina.com/concierto-2018-coliseo" name="evidencia2">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label  class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <input type ="button" class="btn btn-secondary" value="Agregar otro link" onclick="new_link();" id="agregarbutton"> 
+                </div>
+              </div>
+
+              <div class="form-group row" ">
+                <div class="col-sm-6 " id="nombresizquierda" style="display: none;">
+                  <div class="row">
+                    <label for="persona1" class="col-sm-4 col-form-label">Persona 1*</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control"  placeholder="Nombre de la persona" required="true" name="persona1">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="persona2" class="col-sm-4 col-form-label">Persona 2</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control"  placeholder="Nombre de la persona"  name="persona2">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6" id="nombresderecha" style="display: none;">
+                  <div class="row">
+                    <label for="persona3" class="col-sm-4 col-form-label">Persona 3</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control"  placeholder="Nombre de la persona"  name="persona3">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="persona4" class="col-sm-4 col-form-label">Persona 4</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control"  placeholder="Nombre de la persona"  name="persona4">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="form-group row">
+                <label  class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <button type="submit" class="btn btn-success" id="buttonsubmit" style="display: none;">Enviar</button>
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <!-- Parallax scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+</body>
+
+<script type="text/javascript">
+  function select_social(){
+    document.getElementById("nada").style.display = "none";
+    document.getElementById("buttonsubmit").style.display = "block";
+    var u = document.getElementById("tipoprensa");
+    var urgencia = u.options[u.selectedIndex].value;    
+    document.getElementById("nombresizquierda").style.display = "block";
+    if (urgencia=='radio') {
+      document.getElementById("nombresderecha").style.display = "block";
+    }else{
+            document.getElementById("nombresderecha").style.display = "none";
+
+    }
+  }
+
+  function new_link(){
+    document.getElementById("evidencialink").style.display = "flex";
+    document.getElementById("agregarbutton").style.display = "none";
+
+    }
+</script>
+</html>
